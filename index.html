@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <meta name="description" content="parallax effect">
+  <script src="layerJS.min.js"></script>
+  <link href="css/layerJS..css" type="text/css" rel="stylesheet" />
+  <link href="css/your-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div lj-type="stage">
+  <!-- Add a stage. -->
+  <div lj-type="layer" lj-default-frame="frame1">
+    <!-- The layer for the main content -->
+    <div lj-type="frame" lj-name="frame1" class="content" lj-fit-to="responsive-width" lj-neighbors.l="#sidemenu" lj-neighbors.r="#closed">
+    <img src="https://cdn.layerjs.org/examples/parallax/img/prezi.png">
+    </div>
+  </div>
+  <div lj-type="layer">
+    <!-- Foreground layer. -->
+    <div lj-type="frame">
+      <!-- Frame containing the actual content. If higher than the stage it will scroll. -->
+      <p class="p">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+      </p>
+      <div class="transparent">
+      </div>
+      <p class="p">
+        Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe
+        al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+      </p>
+      <div class="transparent">
+      </div>
+      <p class="p">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.&nbsp;
+      </p>
+      <p class="p">
+        Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe
+        al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+      </p>
+    </div>
+  </div>
+  <div lj-type="layer" lj-name="menulayer" lj-native-scroll="false">
+    <!-- The layer for the menu on top of the main content -->
+    <div lj-type="frame" lj-name="closed" class="nav" lj-fit-to="responsive-width" lj-transition="fade" lj-neighbors.l="#sidemenu">
+      <!-- The frame for the menu in the closed state -->
+      <div class="nav-hor">
+        <a href="#sidemenu&t=0.5s">&#x2630; Menu</a>
+        <!-- Link to open state with parameters that control the animation type and the timing. -->
+      </div>
+    </div>
+    <div lj-type="frame" lj-name="sidemenu" class="nav menu" lj-fit-to="responsive-height" lj-transition="right" lj-neighbors.r="closed">
+      <!-- The frame for the menu in the open state. The "neighbors" attribute allows swipe gestures to close the menu. -->
+      <a href="#closed&t=0.5s" class="close">&#x2573;</a>
+      <!-- The close button with a link to the closed state. -->
+      <ul class="nav-list">
+        <li class="nav-item">
+          Menu 1
+        </li>
+        <li class="nav-item">
+          Menu 2
+        </li>
+        <li class="nav-item">
+          Menu 3
+        </li>
+        <li class="nav-item">
+          Menu 4
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
